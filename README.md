@@ -18,13 +18,17 @@ Or install it yourself as:
 
     $ gem install rundler
 
+Install R however you like, as long as the Rscript executable is available.
+
 ## Usage
 
 ```$ rundle --init```
 
-Update config/environment.R to use a different path if needed.
+Update config/environment.R to use a different path if needed. Add packages to the list in Rfile.R
 
 ```$ rundle```
+
+Be sure to source config/environment.R in your R scripts so they look for packages in teh correct location.
 
 ## Development
 

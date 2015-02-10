@@ -1,0 +1,6 @@
+# repo arbitrarily chosen from http://cran.r-project.org/mirrors.html
+rundler_r_repo <- "http://rweb.quant.ku.edu/cran/"
+rundler_r_file_packages <- c(
+  "put_a_real_package_name_here",
+  "or_here",
+)

@@ -1,0 +1,21 @@
+#!/usr/bin/env ruby
+
+require 'open3'
+
+bin_path = File.expand_path(File.dirname(__FILE__))
+if ARGV[0] == '--init'
+  system('mkdir -p config')
+  if system("cp #{bin_path}/../config/environment.R.example config/environment.R")
+    puts "Example config copied to /config/environment.R"
+  end
+
+  if system("cp #{bin_path}/../config/Rfile.R.example Rfile.R")
+    puts "Example Rfile copied to ./Rfile.R"
+  end
+else
+  Open3.popen2e("#{bin_path}/rundle_install") do |i, out_and_err, t|
+    i.close
+    out_and_err.each { |o_row| puts(o_row) }
+    t.join
+  end
+end

@@ -1,0 +1,18 @@
+#!/usr/bin/Rscript --vanilla
+
+source('config/environment.R')
+source('Rfile.R')
+
+rundler_package_install <- function(package) {
+  install.packages(package, repos=rundler_r_repo)
+}
+
+suppressWarnings(
+  for(p in rundler_r_file_packages) {
+    if(require(p, character.only=TRUE, quietly=TRUE) == FALSE) {
+      rundler_package_install(p)
+    } else {
+      print(paste(p, 'already installed.'))
+    }
+  }
+)

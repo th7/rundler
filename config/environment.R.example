@@ -1,0 +1,8 @@
+# ensure vendor/R exists
+for(d in c('vendor', 'vendor/R')) {
+  dir.create(d, showWarnings=FALSE)
+}
+
+# use vendor/R for installing and loading packages
+Sys.setenv(R_LIB="vendor/R")
+.libPaths('vendor/R')
