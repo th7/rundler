@@ -14,7 +14,7 @@ Gem::Specification.new do |spec|
   end
 
   spec.summary       = %q{Extremely basic installation of R packages}
-  spec.homepage      = "github.com/th7/rundler"
+  spec.homepage      = "http://github.com/th7/rundler"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
