@@ -28,7 +28,7 @@ Update config/environment.R to use a different path if needed. Add packages to t
 
 ```$ rundle```
 
-Be sure to source config/environment.R in your R scripts so they look for packages in teh correct location.
+Be sure to source config/environment.R in your R scripts so they look for packages in the correct location.
 
 ## Development
 
